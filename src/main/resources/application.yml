@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: PAYMENT-SERVICE
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/paymentdb
+    username: root
+    password: toortoor
+  jpa:
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+  cache:
+    jcache:
+      config: classpath:ehcache.xml
+
+server:
+  port: 8080
